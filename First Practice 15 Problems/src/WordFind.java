@@ -11,10 +11,16 @@ public class WordFind {
 	Scanner readFile;
 	ArrayList<String> words = new ArrayList();
 	char[][] letterArray = new char[10][10];
+	
 	public WordFind(PrintWriter pr) throws FileNotFoundException {
+		pr.println("==========Word-Find==========");
 		readFile = new Scanner(file);
 		getWords();
 		buildLetterArray();
+		for(String s : words) {
+			Point point = new Point(findWord(s));
+			pr.println((int)point.getX() + " " + (int)point.getY());
+		}
 		
 	}
 	
@@ -23,6 +29,7 @@ public class WordFind {
 		for(int i = 0; i < rep; i++) {
 			words.add(readFile.next());
 		}
+		System.out.println(words);
 	}
 	
 	private void buildLetterArray() {
@@ -38,30 +45,60 @@ public class WordFind {
 		}
 	}
 	private Point findWord(String word) {
-		
+		System.out.println(word.length());
 		char currentChar = ' ';
+		int x = 0;
+		int y = 0;
 		int wordIndex = 0;
 		Point wordLoc = new Point();
 		for(int row = 0; row < letterArray.length; row++) {
 			for(int col = 0; col < letterArray[row].length; col++) {
 				currentChar = letterArray[row][col];
+				System.out.print(currentChar + " ");
 				
 				if(currentChar == word.charAt(0)) {
-					if(letterArray[row].length - col >= word.length()) {
-						int index = col;
-						while(index < letterArray[row].length) {
+					
+					int index = col;
+					System.out.println("index: " + index);
+					while(index < letterArray[row].length - 1 && wordIndex != word.length() - 1) {
+						index++;
+						System.out.println("index: " + index);
+						wordIndex++;
+						System.out.println("wordIndex " + wordIndex);
+						if(letterArray[row][index] != word.charAt(wordIndex)) {
+							break;
+								
+						}		
+					}
+					System.out.println("WordIndex and WordLength: " + wordIndex + " " + word.length());
+					if(wordIndex < word.length() - 1) {
+						wordIndex = 0;
+						index = row;
+						while(index < letterArray.length - 1 && wordIndex != word.length() - 1) {
 							index++;
 							wordIndex++;
-							if(letterArray[row][index] == word.charAt(wordIndex)) {
-								
-							}
-							
-							
+							if(letterArray[index][col] != word.charAt(wordIndex)) {
+								break;
+									
+							}		
 						}
+						
+						
 					}
+					
+					if(wordIndex == word.length() - 1) {
+						x = col;
+						y = row;
+						return new Point(x, y);
+					}
+					
+					
 				}
 				wordIndex = 0;
+				
 			}
+			System.out.println();
 		}
+		return new Point();
 	}
 }

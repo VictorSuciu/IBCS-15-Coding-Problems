@@ -8,6 +8,7 @@ public class Main {
 		PrintWriter writeFile = new PrintWriter(fileOut);
 		
 		new Gorf(writeFile);
+		new WordFind(writeFile);
 		
 		
 		writeFile.close();

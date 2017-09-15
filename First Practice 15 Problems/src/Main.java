@@ -9,7 +9,7 @@ public class Main {
 		
 		new Gorf(writeFile);
 		new WordFind(writeFile);
-		
+		new Pokey(writeFile);
 		
 		writeFile.close();
 	}

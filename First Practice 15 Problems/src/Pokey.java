@@ -9,8 +9,10 @@ public class Pokey {
 	File file = new File("Data Resources\\pokey.dat");
 	Scanner readFile;
 	
-	ArrayList<Character> cards = new ArrayList();
-	ArrayList<Character> difCards = new ArrayList();
+	ArrayList<String> cards = new ArrayList();
+	ArrayList<String> difCards = new ArrayList();
+	String[] cardOrder = {"1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
+
 	int[] counter;
 	
 	public Pokey(PrintWriter pr) throws FileNotFoundException {
@@ -18,9 +20,12 @@ public class Pokey {
 		
 		readFile.nextLine();
 		
+		pr.println("==========Pokey==========");
 		while(readFile.hasNext()) {
 			populateCardsList();
-			System.out.println(findBestHand());
+			pr.println(findBestHand());
+			cards.clear();
+			difCards.clear();
 		}
 		
 		
@@ -29,7 +34,8 @@ public class Pokey {
 	private void populateCardsList() {
 
 		for(int i = 0; i < 5; i++) {
-			cards.add(readFile.next().charAt(0));
+			
+			cards.add(readFile.next());
 		}
 
 	}
@@ -38,14 +44,14 @@ public class Pokey {
 		
 		boolean duplicate = false;
 		
-		for(char c : cards) {
-			for(char c2 : difCards) {
-				if(c2 == c) {
+		for(String s : cards) {
+			for(String s2 : difCards) {
+				if(s2.equals(s)) {
 					duplicate = true;
 				}
 			}
 			if(duplicate == false) {
-				difCards.add(c);
+				difCards.add(s);
 			}
 			duplicate = false;
 		}
@@ -54,8 +60,8 @@ public class Pokey {
 		
 		int count = 0;
 		for(int i = 0; i < difCards.size(); i++) {
-			for(char c2 : cards) {
-				if(c2 == difCards.get(i)) {
+			for(String s2 : cards) {
+				if(s2.equals(difCards.get(i))) {
 					count++;
 				}
 			}
@@ -63,10 +69,14 @@ public class Pokey {
 			count = 0;
 		}
 		
+		System.out.println(cards);
 		
 		
 		if(hasFullHouse() == true) {
 			return "Full House";
+		}
+		else if(hasStraight() == true) {
+			return "Straight";
 		}
 		else if(hasTriple() == true) {
 			return "Triple";
@@ -106,5 +116,25 @@ public class Pokey {
 			}
 		}
 		return false;
+	}
+	
+	private boolean hasStraight() {
+		
+		int startIndex = 0;
+		
+		while(!cardOrder[startIndex].equals(cards.get(0))) {
+			startIndex++;
+			if(startIndex == 14) {
+				return false;
+			}
+		}
+
+		
+		for(int i = 1; i < cards.size() - 1; i++) {
+			if(!cards.get(i).equals(cardOrder[startIndex + i])) {
+				return false;
+			}
+		}
+		return true;
 	}
 }

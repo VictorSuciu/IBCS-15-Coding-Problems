@@ -49,8 +49,10 @@ public class WordFind {
 		int y = 0;
 		int wordIndex = 0;
 		Point wordLoc = new Point();
+		
 		for(int row = 0; row < letterArray.length; row++) {
 			for(int col = 0; col < letterArray[row].length; col++) {
+				
 				currentChar = letterArray[row][col];
 				
 				if(currentChar == word.charAt(0)) {
@@ -77,8 +79,6 @@ public class WordFind {
 									
 							}		
 						}
-						
-						
 					}
 					
 					if(wordIndex == word.length() - 1) {
@@ -86,11 +86,8 @@ public class WordFind {
 						y = row;
 						return new Point(x, y);
 					}
-					
-					
 				}
 				wordIndex = 0;
-				
 			}
 			System.out.println();
 		}

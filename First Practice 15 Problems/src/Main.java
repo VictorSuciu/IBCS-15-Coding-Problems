@@ -10,6 +10,7 @@ public class Main {
 		new Gorf(writeFile);
 		new WordFind(writeFile);
 		new Pokey(writeFile);
+		new LastOneStanding(writeFile);
 		
 		writeFile.close();
 	}

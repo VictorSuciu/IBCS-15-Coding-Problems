@@ -16,21 +16,22 @@ public class LastOneStanding {
 		readFile = new Scanner(file);
 		
 		int repeat = readFile.nextInt();
-		int lineNum = readFile.nextInt();
-		
+		int lineNum = 0;
 		System.out.println("repeat = " + repeat);
 		
 		String answer = "";
 		
 		for(int i = 0; i < repeat; i++) {
 			
+			lineNum = readFile.nextInt();
+			
+			readFile.nextLine();
+
 			answer = playGame(lineNum);
 			System.out.println(answer);
 			
 			jail.clear();
 			notJail.clear();
-			
-			lineNum = readFile.nextInt();
 
 		}
 	}

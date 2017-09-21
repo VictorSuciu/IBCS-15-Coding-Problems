@@ -67,10 +67,7 @@ public class Pokey {
 			}
 			counter[i] = count;
 			count = 0;
-		}
-		
-		System.out.println(cards);
-		
+		}		
 		
 		if(hasFullHouse() == true) {
 			return "Full House";

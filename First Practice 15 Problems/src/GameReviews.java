@@ -42,7 +42,7 @@ public class GameReviews {
 		 }
 		 
 		 for(String s : gamesMap.keySet()) {
-			 pr.println(s + " gets " + round(getMean(s)) + "stars");
+			 pr.println(s + " gets " + round(getMean(s)) + " stars");
 		 }
 	}
 	

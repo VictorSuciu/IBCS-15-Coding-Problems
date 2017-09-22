@@ -3,29 +3,30 @@
 -7.5
 -37.5
 
-
-
-
-
-
-
-
-
-
 ==========Word-Find==========
 0 0
 8 4
 1 6
+
 ==========Pokey==========
 Pair
 Straight
 Full House
 Zilch
+
 ==========Clock-Paper-Scissors==========
 Player 1
 Player 2
 Player 1
+
 ==========Sammy-Says==========
 walk 
 jump 
 crawl forward 
+
+==========Game-Reviews==========
+Pac-Dude gets 3.7stars
+Settlers of Catan gets 5.0stars
+Super Luigi Planet gets 3.4stars
+Nomopoly gets 3.3stars
+

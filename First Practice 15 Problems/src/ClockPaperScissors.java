@@ -26,7 +26,6 @@ public class ClockPaperScissors {
 	private int whoWins() {
 		
 		String line = readFile.nextLine();
-		System.out.println("Line = " + line);
 		Scanner readLine = new Scanner(line);
 		
 		int r1 = readLine.nextInt();

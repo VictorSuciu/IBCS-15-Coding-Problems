@@ -27,9 +27,6 @@ public class Gorf {
 			pr.println(x);
 			
 		}
-		for(int i = 0; i < 10; i++) {
-			pr.println();
-		}
 	}
 	
 	private double calculateDistance() {

@@ -8,11 +8,26 @@ public class Main {
 		PrintWriter writeFile = new PrintWriter(fileOut);
 		
 		new Gorf(writeFile);
+		writeFile.println();
+		
 		new WordFind(writeFile);
+		writeFile.println();
+		
 		new Pokey(writeFile);
+		writeFile.println();
+		
 		//new LastOneStanding(writeFile);
+		
 		new ClockPaperScissors(writeFile);
+		writeFile.println();
+		
 		new SammySays(writeFile);
+		writeFile.println();
+		
+		new GameReviews(writeFile);
+		writeFile.println();
+		
+		
 		
 		writeFile.close();
 	}

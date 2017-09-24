@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class SammySays {
 	
-	File file = new File("Data Resources\\sammysays.dat");
+	File file = new File("Data Resources/sammysays.dat");
 	Scanner readFile;
 	
 	public SammySays(PrintWriter pr) throws FileNotFoundException {

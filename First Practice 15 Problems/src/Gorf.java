@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Gorf {
 	
-	File file = new File("Data Resources\\gorf.dat");
+	File file = new File("Data Resources/gorf.dat");
 	Scanner readFile;
 	double x;
 	double a;
@@ -23,7 +23,6 @@ public class Gorf {
 			b = readFile.nextDouble();
 			c = readFile.nextDouble();
 			x = calculateDistance();
-			System.out.println(a + " " + b + " " + c + " " + x);
 			pr.println(x);
 			
 		}
@@ -69,8 +68,5 @@ public class Gorf {
 		else {
 			return 0 - d;
 		}
-		
-				
-		
 	}
 }

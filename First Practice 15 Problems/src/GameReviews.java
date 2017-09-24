@@ -8,7 +8,7 @@ import java.util.HashMap;
 
 public class GameReviews {
 	
-	File file = new File("Data Resources\\gamereviews.dat");
+	File file = new File("Data Resources/gamereviews.dat");
 	Scanner readFile;
 	HashMap<String, ArrayList<Integer>> gamesMap = new HashMap<String, ArrayList<Integer>>();
 	

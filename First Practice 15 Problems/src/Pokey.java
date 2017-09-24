@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class Pokey {
 	
-	File file = new File("Data Resources\\pokey.dat");
+	File file = new File("Data Resources/pokey.dat");
 	Scanner readFile;
 	
 	ArrayList<String> cards = new ArrayList();

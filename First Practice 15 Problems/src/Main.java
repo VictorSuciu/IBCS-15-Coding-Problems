@@ -16,7 +16,8 @@ public class Main {
 		new Pokey(writeFile);
 		writeFile.println();
 		
-		//new LastOneStanding(writeFile);
+		new LastOneStanding(writeFile);
+		writeFile.println();
 		
 		new ClockPaperScissors(writeFile);
 		writeFile.println();
@@ -25,6 +26,9 @@ public class Main {
 		writeFile.println();
 		
 		new GameReviews(writeFile);
+		writeFile.println();
+		
+		new Nomopoly(writeFile);
 		writeFile.println();
 		
 		

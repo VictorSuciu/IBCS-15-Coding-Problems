@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class ClockPaperScissors {
 	
-	File file = new File("Data Resources\\clockpaperscissors.dat");
+	File file = new File("Data Resources/clockpaperscissors.dat");
 	Scanner readFile;
 	
 	public ClockPaperScissors(PrintWriter pr) throws FileNotFoundException {

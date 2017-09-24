@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class WordFind {
 	
-	File file = new File("Data Resources\\wordfind.dat");
+	File file = new File("Data Resources/wordfind.dat");
 	Scanner readFile;
 	ArrayList<String> words = new ArrayList();
 	char[][] letterArray = new char[10][10];
@@ -89,7 +89,6 @@ public class WordFind {
 				}
 				wordIndex = 0;
 			}
-			System.out.println();
 		}
 		return new Point();
 	}

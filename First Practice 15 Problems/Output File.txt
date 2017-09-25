@@ -44,3 +44,79 @@ Nomopoly gets 3.3 stars
 If someone lands on Atlantis Ave, they will owe me $151.00.
 If someone lands on Engelberg Way, they will owe me $130.00.
 
+==========Bopscotch==========
+/ 2 \
+\ 1 /
+
+/ 5 \
+[3][4]
+ [2]
+\ 1 /
+
+/ 9 \
+ [8]
+[6][7]
+ [5]
+[3][4]
+ [2]
+\ 1 /
+
+/ 10 \
+ [9]
+ [8]
+[6][7]
+ [5]
+[3][4]
+ [2]
+\ 1 /
+
+/ 11 \
+[9][10]
+ [8]
+[6][7]
+ [5]
+[3][4]
+ [2]
+\ 1 /
+
+
+==========Chaseball==========
+ /\
+/  \
+\  /
+ \/
+
+    /\
+   /  \
+  /    \
+ /      \
+/        \
+\        /
+ \      /
+  \    /
+   \  /
+    \/
+
+
+==========Invaders==========
+Day 1
+     Rate: 1000 Miles Per Day
+     NYC Has Fallen!
+Day 2
+     Rate: 2000 Miles Per Day
+     Auburn Has Fallen!
+Day 3
+     Rate: 4000 Miles Per Day
+     Seattle Has Fallen!
+     Boise Has Fallen!
+Day 4
+     Rate: 16000 Miles Per Day
+Day 5
+     Rate: 16000 Miles Per Day
+     Sydney Has Fallen!
+     The aliens have taken over!
+
+==========Card-Sort==========
+[club 10, club K, heart 3]
+[club 7, diamond 2, diamond 7, heart Q, spade 7]
+

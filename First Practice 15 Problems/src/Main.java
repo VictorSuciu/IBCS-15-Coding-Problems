@@ -31,6 +31,17 @@ public class Main {
 		new Nomopoly(writeFile);
 		writeFile.println();
 		
+		new Bopscotch(writeFile);
+		writeFile.println();
+		
+		new Chaseball(writeFile);
+		writeFile.println();
+		
+		new Invaders(writeFile);
+		writeFile.println();
+		
+		new CardSort(writeFile);
+		writeFile.println();
 		
 		
 		writeFile.close();

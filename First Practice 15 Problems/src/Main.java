@@ -43,6 +43,8 @@ public class Main {
 		new CardSort(writeFile);
 		writeFile.println();
 		
+		new Chest(writeFile);
+		writeFile.println();
 		
 		writeFile.close();
 	}
